@@ -59,10 +59,12 @@ def main():
                     for c in comps if c.id == id_comp]
 
 #задание 1
+    print('Задание 1:')
     for comp_name, comp_power, micr_name in one_to_many:
         if comp_name[0] == 'a':
             print(comp_name, micr_name)
 #задание 2
+    print('\nЗадание 2:')
     micrs_power = [(m_name, c_power)
         for c_name, c_power, m_name in one_to_many]
 
@@ -78,7 +80,9 @@ def main():
 
 
 #задание 3
+    print('\nЗадание 3:')
     res_2 = sorted(many_to_many, key=itemgetter(1))
-    print(res_2)
+    for i in range (0,len(res_2)):
+        print(res_2[i])
 if __name__ == '__main__':
      main()
